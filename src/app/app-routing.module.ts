@@ -11,6 +11,19 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  
+  {
+    path: 'registrardeclaracion',
+    loadChildren: () => import('./pages/registrardeclaracion/registrardeclaracion.module').then( m => m.RegistrardeclaracionPageModule)
+  },
+  {
+    path: 'registrarempresa',
+    loadChildren: () => import('./pages/registrarempresa/registrarempresa.module').then( m => m.RegistrarempresaPageModule)
+  },
+  {
+    path: 'resultado',
+    loadChildren: () => import('./pages/resultado/resultado.module').then( m => m.ResultadoPageModule)
+  },
 ];
 
 @NgModule({
